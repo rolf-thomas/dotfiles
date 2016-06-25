@@ -8,3 +8,7 @@ alias ausschalten='sudo shutdown -h now'
 # Updates
 alias systemupdate='sudo apt-get --yes clean && sudo apt-get --yes update && sudo apt-get --yes dist-upgrade && sudo reboot'
 alias update_letsencrypt='cd /opt/letsencrypt && sudo git pull'
+
+# git related
+alias dotfiles_init='mkdir ~/repositories & cd ~/repositories && git clone https://github.com/rolf-thomas/dotfiles.git'
+alias dotfiles_update='cd ~/repositories/dotfiles && git pull && rsync -rv --exclude=.git . ~/'
