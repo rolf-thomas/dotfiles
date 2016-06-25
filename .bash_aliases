@@ -1,7 +1,8 @@
-# Eigene Kommandos
+# Allgemeine Kommandos
 alias cdw='cd /var/www && ll'
 alias systeminfo='/etc/update-motd.d/50-landscape-sysinfo'
 alias mux='tmux attach -t base || tmux new -s base'
+alias edit_cron='sudo crontab -e'
 alias neustart='sudo reboot'
 alias ausschalten='sudo shutdown -h now'
 
