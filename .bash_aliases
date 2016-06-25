@@ -6,7 +6,8 @@ alias neustart='sudo reboot'
 alias ausschalten='sudo shutdown -h now'
 
 # Updates
-alias systemupdate='sudo apt-get --yes clean && sudo apt-get --yes update && sudo apt-get --yes dist-upgrade && sudo reboot'
+alias update_system='sudo apt-get --yes clean && sudo apt-get --yes update && sudo apt-get --yes dist-upgrade && sudo reboot'
+# -> regarding changelogs see http://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
 alias update_letsencrypt='cd /opt/letsencrypt && sudo git pull'
 
 # git related
