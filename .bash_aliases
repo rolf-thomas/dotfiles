@@ -11,4 +11,4 @@ alias update_letsencrypt='cd /opt/letsencrypt && sudo git pull'
 
 # git related
 alias dotfiles_init='mkdir ~/repositories & cd ~/repositories && git clone https://github.com/rolf-thomas/dotfiles.git && cd ~'
-alias dotfiles_update='cd ~/repositories/dotfiles && git pull && rsync -rv --exclude=.git . ~/ && cd ~'
+alias dotfiles_update='cd ~/repositories/dotfiles && git pull && rsync -rv --exclude=.git . ~/ && source ~/.bashrc && cd ~'
