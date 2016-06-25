@@ -1,5 +1,5 @@
 # Eigene Kommandos
-alias cdw='cd /var/www;ll'
+alias cdw='cd /var/www && ll'
 alias systeminfo='/etc/update-motd.d/50-landscape-sysinfo'
 alias mux='tmux attach -t base || tmux new -s base'
 alias neustart='sudo reboot'
