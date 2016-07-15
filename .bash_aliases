@@ -12,6 +12,6 @@ alias update_system='sudo apt-get --yes clean && sudo apt-get --yes update && su
 alias update_letsencrypt='cd /opt/letsencrypt && sudo git reset --hard && sudo git pull'
 alias update_certificates='sudo /opt/letsencrypt/letsencrypt-auto renew'
 
-# git related
+# git/dotfiles related
 alias dotfiles_init='mkdir ~/repositories && cd ~/repositories && git clone https://github.com/rolf-thomas/dotfiles.git && cd ~'
 alias dotfiles_update='cd ~/repositories/dotfiles && git pull && rsync -rv --exclude=.git . ~/ && source ~/.bashrc && cd ~'
