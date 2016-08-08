@@ -5,6 +5,7 @@ alias mux='tmux attach -t base || tmux new -s base'
 alias edit_cron='sudo crontab -e'
 alias neustart='sudo reboot'
 alias ausschalten='sudo shutdown -h now'
+alias speicherplatz='du -h --max-depth=1'
 
 # Updates
 alias update_system='sudo apt-get --yes clean && sudo apt-get --yes update && sudo apt-get --yes dist-upgrade && sudo reboot'
