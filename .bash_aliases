@@ -1,18 +1,19 @@
-# Allgemeine Kommandos
 alias cdw='cd /var/www && ll'
-alias systeminfo='/etc/update-motd.d/50-landscape-sysinfo'
 alias mux='tmux attach -t base || tmux new -s base'
-alias edit_cron='sudo crontab -e'
-alias neustart='sudo reboot'
-alias ausschalten='sudo shutdown -h now'
-alias speicherplatz='du -h --max-depth=1'
+
+# Allgemeine Kommandos
+alias _cron_edit='sudo crontab -e'
+alias _system_restart='sudo reboot'
+alias _system_shutdown='sudo shutdown -h now'
+alias _info_speicherplatz='du -h --max-depth=1'
+alias _info_system='/etc/update-motd.d/50-landscape-sysinfo'
 
 # Updates
-alias update_system='sudo apt-get --yes clean && sudo apt-get --yes update && sudo apt-get --yes dist-upgrade && sudo reboot'
+alias _update_system='sudo apt-get --yes clean && sudo apt-get --yes update && sudo apt-get --yes dist-upgrade && sudo reboot'
 # -> regarding changelogs see http://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
-alias update_letsencrypt='cd /opt/letsencrypt && sudo git reset --hard && sudo git pull'
-alias update_certificates='sudo /opt/letsencrypt/letsencrypt-auto renew'
+alias _update_letsencrypt='cd /opt/letsencrypt && sudo git reset --hard && sudo git pull'
+alias _update_certificates='sudo /opt/letsencrypt/letsencrypt-auto renew'
 
 # git/dotfiles related
-alias dotfiles_init='mkdir ~/repositories && cd ~/repositories && git clone https://github.com/rolf-thomas/dotfiles.git && cd ~'
-alias dotfiles_update='cd ~/repositories/dotfiles && git pull && rsync -rv --exclude=.git . ~/ && source ~/.bashrc && cd ~'
+alias _dotfiles_init='mkdir ~/repositories && cd ~/repositories && git clone https://github.com/rolf-thomas/dotfiles.git && cd ~'
+alias _dotfiles_update='cd ~/repositories/dotfiles && git pull && rsync -rv --exclude=.git . ~/ && source ~/.bashrc && cd ~'
