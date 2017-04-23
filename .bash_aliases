@@ -10,6 +10,7 @@ alias _info_system='/etc/update-motd.d/50-landscape-sysinfo'
 
 # Updates
 alias _update_system='sudo apt-get --yes clean && sudo apt-get --yes update && sudo apt-get --yes dist-upgrade && sudo reboot'
+alias _update_system_tmux='tmux new -d -s update && tmux send -t update.0 "_update_system" ENTER'
 # -> regarding changelogs see http://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
 alias _update_letsencrypt='cd /opt/letsencrypt && sudo git reset --hard && sudo git pull'
 alias _update_certificates='sudo /opt/letsencrypt/letsencrypt-auto renew'
