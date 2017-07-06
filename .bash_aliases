@@ -18,3 +18,9 @@ alias _update_certificates='sudo /opt/letsencrypt/letsencrypt-auto renew'
 # git/dotfiles related
 alias _dotfiles_init='mkdir ~/repositories && cd ~/repositories && git clone https://github.com/rolf-thomas/dotfiles.git && cd ~'
 alias _dotfiles_update='cd ~/repositories/dotfiles && git pull && rsync -rv --exclude=.git . ~/ && source ~/.bashrc && cd ~'
+
+# Shows Redirects of a given url
+# usage: `redirect http://google.com`
+redirect() {
+	curl -vL $1 2>&1 | grep --color -i -e "> get" -e "< location:" -e "> host"
+}
