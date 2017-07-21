@@ -8,6 +8,9 @@ alias _system_shutdown='sudo shutdown -h now'
 alias _info_speicherplatz='du -h --max-depth=1'
 alias _info_system='/etc/update-motd.d/50-landscape-sysinfo'
 
+# git related
+alias _git_size = 'git gc && git count-objects -vH'
+
 # Updates
 alias _update_system='sudo apt-get --yes clean && sudo apt-get --yes update && sudo apt-get --yes dist-upgrade && sudo reboot'
 alias _update_system_tmux='tmux new -d -s update && tmux send -t update.0 "_update_system" ENTER'
