@@ -1,5 +1,6 @@
 alias cdw='cd /var/www && ll'
 alias mux='tmux attach -t base || tmux new -s base'
+alias ..='cd ..'
 
 # Allgemeine Kommandos
 alias _cron_edit='sudo crontab -e'
