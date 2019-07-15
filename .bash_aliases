@@ -6,8 +6,10 @@ alias ..='cd ..'
 alias _cron_edit='sudo crontab -e'
 alias _system_restart='sudo reboot'
 alias _system_shutdown='sudo shutdown -h now'
-alias _info_speicherplatz='du -h --max-depth=1'
+alias _info_diskspace='du -h --max-depth=1'
 alias _info_system='/etc/update-motd.d/50-landscape-sysinfo'
+alias _info_mysql='mysqladmin status -u web -p'
+alias _info_memory='ps -eo pmem,pcpu,vsize,pid,cmd | sort -k 1 -nr | head -2'
 
 # git related
 alias _git_size='git gc && git count-objects -vH'
